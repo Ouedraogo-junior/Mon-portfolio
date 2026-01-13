@@ -14,7 +14,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
           className="w-full h-48 object-cover"
         />
       ) : (
-        <div className="h-48 bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center">
+        <div className="h-48 bg-linear-to-br from-blue-500 to-purple-600 flex items-center justify-center">
           <span className="text-white text-xl font-semibold">Image du projet</span>
         </div>
       )}
