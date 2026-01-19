@@ -28,11 +28,11 @@ export const projects: Project[] = [
   },
   {
     id: 3,
-    title: "Project Hub",
-    description: "Plateforme de gestion de projets avec interface moderne et système de suivi des tâches. Grâce à cette plateforme, les personnes qui ont des projets peuvent venir les exposés dans le but d'obtenir des financements.",
-    technologies: ["Laravel", "Blade", "Tailwind CSS", "SQLite", "PHP"],
-    githubUrl: "https://github.com/ton-username/admin-dashboard",
+    title: "Task Management",
+    description: "Task Management est une application web moderne permettant de gérer efficacement les tâches d'un projet. Elle propose un tableau de type Kanban avec des colonnes « À faire », « En cours » et « Terminé », offrant une vue claire de l’avancement des tâches. Chaque tâche peut inclure des informations importantes telles que la date de création, l’assignation à un utilisateur et son statut.",
+    technologies: ["Node.js", "Express", "React", "Tailwind CSS", "MySQL"],
+    githubUrl: "https://github.com/Ouedraogo-junior/task-management-api",
     // demoUrl: "https://admin-demo.com",
-    imageUrl: "/images/hub.png"
+    imageUrl: "/images/task.png"
   }
 ];
