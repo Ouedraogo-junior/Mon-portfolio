@@ -1,3 +1,6 @@
+"use client";
+
+import { useState } from "react";
 import { Project } from "@/data/projects";
 
 interface ProjectCardProps {
@@ -5,25 +8,39 @@ interface ProjectCardProps {
 }
 
 export default function ProjectCard({ project }: ProjectCardProps) {
+  const [imageError, setImageError] = useState(false);
+  const showFallback = !project.imageUrl || imageError;
+
   return (
     <div className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
-      {project.imageUrl ? (
-        <img 
-          src={project.imageUrl} 
+      {showFallback ? (
+        <div className="h-48 bg-linear-to-br from-blue-500 to-purple-600 flex items-center justify-center">
+          <svg
+            className="h-16 w-16 text-white"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            strokeWidth={1.5}
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M17.25 6.75L22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3l-4.5 16.5"
+            />
+          </svg>
+        </div>
+      ) : (
+        <img
+          src={project.imageUrl}
           alt={project.title}
           className="w-full h-48 object-cover"
+          onError={() => setImageError(true)}
         />
-      ) : (
-        <div className="h-48 bg-linear-to-br from-blue-500 to-purple-600 flex items-center justify-center">
-          <span className="text-white text-xl font-semibold">Image du projet</span>
-        </div>
       )}
-      
       <div className="p-6">
         <h3 className="text-xl font-bold text-gray-900 mb-2">
           {project.title}
         </h3>
-        
         <p className="text-gray-600 mb-4">
           {project.description}
         </p>
