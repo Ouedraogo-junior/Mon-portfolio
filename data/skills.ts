@@ -8,31 +8,35 @@ export const skillsData: SkillCategory[] = [
     category: "Frontend",
     skills: [
       "React / Next.js",
+      "TypeScript / JavaScript ES6+",
       "Tailwind CSS",
       "HTML5 / CSS3",
-      "JavaScript ES6+",
-        "Bootstrap"
+      "Bootstrap"
     ]
   },
   {
     category: "Backend",
     skills: [
       "PHP / Laravel",
-      "Node.js",
+      "Node.js (Express, Fastify)",
+      "Prisma"
     ]
   },
   {
     category: "Mobile",
     skills: [
-      "React Native",
-      "Flutter(Dart)",
+      "Flutter (Dart)",
+      "React Native"
     ]
   },
   {
     category: "Base de données",
     skills: [
-      "SQLite",
+      "PostgreSQL",
+      "Supabase",
       "MySQL",
+      "SQLite",
+      "Redis",
       "Access"
     ]
   },
@@ -49,7 +53,7 @@ export const skillsData: SkillCategory[] = [
     category: "Réseau & Sécurité",
     skills: [
       "Configuration Réseau (TCP/IP, DNS, DHCP)",
-      "Firewall & VPN",
+      "Firewall & VPN"
     ]
   }
 ];
